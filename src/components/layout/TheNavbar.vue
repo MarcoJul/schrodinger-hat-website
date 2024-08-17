@@ -6,6 +6,7 @@ import MobileMenu from '@/components/layout/MobileMenu.vue'
 import CtaComponent from '@/components/buttons/CtaComponent.vue'
 import { useGlobalScrollLock } from '@/functions/useGlobalScrollLock'
 import CtaIcon from '@/components/buttons/CtaIcon.vue'
+import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
 
 interface Link {
   id: string
@@ -117,6 +118,7 @@ watch(showMenu, value => (value ? scrollLock.value = true : scrollLock.value = f
           data-test="nav-theme-icon"
           @click="toggleDark()"
         />
+        <LanguageSwitcher/>
       </nav>
     </div>
     <MobileMenu
